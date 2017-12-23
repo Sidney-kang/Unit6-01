@@ -35,6 +35,13 @@ public class week
          Scanner problem = new Scanner(System.in);
          int userInput = (problem.nextInt());
          //System.out.println(UserChoice);
+         
+         while (userInput < 1 || userInput > 7) 
+         {
+              System.out.println("Sorry, that is not a valid day. Please enter a number between 1 and 7.");
+              System.out.println("What day of the week is your favourite? Please enter the # that corresponds with that day of the week.");
+              userInput = (problem.nextInt());
+          }
     
          for (validDays day: validDays.values()) 
          {
@@ -42,11 +49,6 @@ public class week
               {
                    System.out.println("Your favourite day is " + day);
                }
-          }
-    
-         if (userInput < 1 || userInput > 7) 
-         {
-              System.out.println("Sorry, that is not a valid day. Please enter a number between 1 and 7.");
-          }    
+          }     
      }
 }
